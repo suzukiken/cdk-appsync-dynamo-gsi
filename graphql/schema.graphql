@@ -1,0 +1,14 @@
+type Item {
+  id: ID
+  title: String
+}
+type Query {
+  listItems: [ Item ]
+  getItemByTitle(title: String): [ Item ]
+}
+input ItemInput {
+  title: String
+}
+type Mutation {
+  addItem(input: ItemInput): Item
+}
